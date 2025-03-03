@@ -793,7 +793,7 @@ def main():
         )
         sys.exit(1)
 
-    command, values = match.groups()
+    command, values = match.groups().strip()
     values = values.split()
 
     if not pr_handler.check_status(args.pr_num, "open"):
